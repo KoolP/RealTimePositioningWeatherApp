@@ -7,6 +7,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -24,25 +25,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logoSmaller" translatesAutoresizingMaskIntoConstraints="NO" id="eGx-Ck-Ss2">
-                                <rect key="frame" x="-12" y="-14" width="129" height="137"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoSmaller" translatesAutoresizingMaskIntoConstraints="NO" id="eGx-Ck-Ss2">
+                                <rect key="frame" x="-12" y="-14" width="124" height="131.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="eGx-Ck-Ss2" secondAttribute="height" multiplier="129:137" id="YOa-LL-84n"/>
+                                </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sateliteSmall" translatesAutoresizingMaskIntoConstraints="NO" id="kk9-vW-5fp">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sateliteSmall" translatesAutoresizingMaskIntoConstraints="NO" id="kk9-vW-5fp">
                                 <rect key="frame" x="292" y="7" width="67" height="82"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="kk9-vW-5fp" secondAttribute="height" multiplier="67:82" id="ZPr-DX-dfd"/>
+                                </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cloud2" translatesAutoresizingMaskIntoConstraints="NO" id="uEK-fe-dgO">
-                                <rect key="frame" x="0.0" y="114" width="161" height="104"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cloud2" translatesAutoresizingMaskIntoConstraints="NO" id="uEK-fe-dgO">
+                                <rect key="frame" x="-11" y="108" width="161" height="104"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="uEK-fe-dgO" secondAttribute="height" multiplier="161:104" id="snD-mC-OEK"/>
+                                </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cloud" translatesAutoresizingMaskIntoConstraints="NO" id="KXF-qq-ebl">
-                                <rect key="frame" x="238" y="76" width="174" height="122"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cloud" translatesAutoresizingMaskIntoConstraints="NO" id="KXF-qq-ebl">
+                                <rect key="frame" x="239.5" y="76" width="172.5" height="121"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="KXF-qq-ebl" secondAttribute="height" multiplier="87:61" id="6gK-4h-cQz"/>
+                                </constraints>
                             </imageView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="s2s-7K-yTq" customClass="CurrentWeatherView" customModule="WeatherToday" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s2s-7K-yTq" customClass="CurrentWeatherView" customModule="WeatherToday" customModuleProvider="target">
                                 <rect key="frame" x="67" y="206" width="240" height="140"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="26" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uc6-ay-sFw">
                                         <rect key="frame" x="61" y="40" width="119" height="80"/>
@@ -60,18 +68,26 @@
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.94509803920000002" green="0.70196078429999997" blue="0.1333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="s2s-7K-yTq" secondAttribute="height" multiplier="12:7" id="AUW-wh-W1H"/>
+                                    <constraint firstAttribute="height" constant="140" id="f8E-BQ-ZSY"/>
+                                    <constraint firstAttribute="width" constant="240" id="hOC-ZB-iNf"/>
+                                </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="26" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="AnN-NN-oLQ">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="AnN-NN-oLQ">
                                 <rect key="frame" x="8" y="439" width="359" height="208"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="359" id="cYI-Fs-cgz"/>
+                                    <constraint firstAttribute="height" constant="208" id="jv3-gf-wU2"/>
+                                </constraints>
                                 <color key="separatorColor" red="0.94901961089999998" green="0.85490196939999996" blue="0.64705884459999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="9ea-ol-GVG" customClass="LocationsTableViewCell" customModule="WeatherToday" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="359" height="26"/>
+                                        <rect key="frame" x="0.0" y="28" width="359" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9ea-ol-GVG" id="o6C-ia-3Yu">
-                                            <rect key="frame" x="0.0" y="0.0" width="359" height="25.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="359" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sKz-hc-NzX">
@@ -105,9 +121,8 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cc2-uP-ecB" customClass="WeekWeatherForecastView" customModule="WeatherToday" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cc2-uP-ecB" customClass="WeekWeatherForecastView" customModule="WeatherToday" customModuleProvider="target">
                                 <rect key="frame" x="67" y="364" width="240" height="52"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="16" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l1i-sk-Tq3">
                                         <rect key="frame" x="8" y="8" width="42" height="36"/>
@@ -181,9 +196,35 @@
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="S5o-mm-8EU"/>
+                                    <constraint firstAttribute="width" constant="240" id="cI4-H0-aT6"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.97254901960784312" green="0.97254901960784312" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="cc2-uP-ecB" firstAttribute="top" secondItem="s2s-7K-yTq" secondAttribute="bottom" constant="18" id="F4B-XX-ZV8"/>
+                            <constraint firstItem="KXF-qq-ebl" firstAttribute="top" secondItem="kk9-vW-5fp" secondAttribute="bottom" constant="-13" id="Mzd-uF-Saw"/>
+                            <constraint firstItem="s2s-7K-yTq" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="PW9-bA-Tyu"/>
+                            <constraint firstItem="uEK-fe-dgO" firstAttribute="top" secondItem="eGx-Ck-Ss2" secondAttribute="bottom" constant="-9.5" id="RE9-7V-Wzk"/>
+                            <constraint firstItem="s2s-7K-yTq" firstAttribute="top" secondItem="uEK-fe-dgO" secondAttribute="bottom" constant="-6" id="RzY-DF-ihG"/>
+                            <constraint firstItem="eGx-Ck-Ss2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="-12" id="Vhs-pK-uTx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="AnN-NN-oLQ" secondAttribute="bottom" constant="20" id="Zlo-CL-cXV"/>
+                            <constraint firstItem="kk9-vW-5fp" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="7" id="bng-pY-xJV"/>
+                            <constraint firstItem="kk9-vW-5fp" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.18" id="cR8-zS-Eni"/>
+                            <constraint firstAttribute="trailing" secondItem="kk9-vW-5fp" secondAttribute="trailing" constant="16" id="dwk-g1-e5L"/>
+                            <constraint firstItem="eGx-Ck-Ss2" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="-14" id="eG8-HM-DTD"/>
+                            <constraint firstAttribute="trailing" secondItem="KXF-qq-ebl" secondAttribute="trailing" constant="-37" id="edb-AP-eUJ"/>
+                            <constraint firstItem="eGx-Ck-Ss2" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.33" id="fCU-89-QGk"/>
+                            <constraint firstItem="uEK-fe-dgO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="-11" id="n7R-5s-2qF"/>
+                            <constraint firstItem="KXF-qq-ebl" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.46" id="q1g-ZT-GF1"/>
+                            <constraint firstAttribute="trailing" secondItem="AnN-NN-oLQ" secondAttribute="trailing" constant="8" id="qYR-UD-Qzk"/>
+                            <constraint firstItem="cc2-uP-ecB" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="sOX-3f-SJM"/>
+                            <constraint firstItem="AnN-NN-oLQ" firstAttribute="top" secondItem="cc2-uP-ecB" secondAttribute="bottom" constant="23" id="x40-Ll-BcD"/>
+                            <constraint firstItem="AnN-NN-oLQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="8" id="ySd-zO-Vun"/>
+                            <constraint firstItem="uEK-fe-dgO" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.43" id="zzc-tt-WLn"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
