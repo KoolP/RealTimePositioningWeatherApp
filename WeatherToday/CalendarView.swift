@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LocalWeatherCalendarView: UIViewController {
+class CalendarView: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

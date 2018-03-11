@@ -8,8 +8,14 @@
 
 import UIKit
 
-class LocationsTableViewCell: UITableViewCell {
+class MainLocationsTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var cityName: UILabel!
+    @IBOutlet weak var cityTemp: UILabel!
+    
+    
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

@@ -7,25 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5F50268620548D1D00DF3BAF /* LocalWeatherCalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F50268520548D1D00DF3BAF /* LocalWeatherCalendarView.swift */; };
-		5FA8575D2051AF1B00AEC4E7 /* CurrentWeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA8575C2051AF1B00AEC4E7 /* CurrentWeatherView.swift */; };
-		5FA8575F2051DEBB00AEC4E7 /* WeekWeatherForecastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA8575E2051DEBB00AEC4E7 /* WeekWeatherForecastView.swift */; };
-		5FA857612051EB3300AEC4E7 /* LocationsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA857602051EB3300AEC4E7 /* LocationsTableViewCell.swift */; };
+		5F50268620548D1D00DF3BAF /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F50268520548D1D00DF3BAF /* CalendarView.swift */; };
+		5F84BF7A2055AF5300FB5481 /* CalendarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F84BF792055AF5300FB5481 /* CalendarTableViewCell.swift */; };
+		5FA8575D2051AF1B00AEC4E7 /* MainCurrentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA8575C2051AF1B00AEC4E7 /* MainCurrentView.swift */; };
+		5FA8575F2051DEBB00AEC4E7 /* MainWeekView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA8575E2051DEBB00AEC4E7 /* MainWeekView.swift */; };
+		5FA857612051EB3300AEC4E7 /* MainLocationsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA857602051EB3300AEC4E7 /* MainLocationsTableViewCell.swift */; };
 		5FABE7F320476929009B36C7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FABE7F220476929009B36C7 /* AppDelegate.swift */; };
-		5FABE7F52047692A009B36C7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FABE7F42047692A009B36C7 /* ViewController.swift */; };
+		5FABE7F52047692A009B36C7 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FABE7F42047692A009B36C7 /* MainViewController.swift */; };
 		5FABE7F82047692A009B36C7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FABE7F62047692A009B36C7 /* Main.storyboard */; };
 		5FABE7FA2047692A009B36C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5FABE7F92047692A009B36C7 /* Assets.xcassets */; };
 		5FABE7FD2047692A009B36C7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FABE7FB2047692A009B36C7 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		5F50268520548D1D00DF3BAF /* LocalWeatherCalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalWeatherCalendarView.swift; sourceTree = "<group>"; };
-		5FA8575C2051AF1B00AEC4E7 /* CurrentWeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeatherView.swift; sourceTree = "<group>"; };
-		5FA8575E2051DEBB00AEC4E7 /* WeekWeatherForecastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekWeatherForecastView.swift; sourceTree = "<group>"; };
-		5FA857602051EB3300AEC4E7 /* LocationsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsTableViewCell.swift; sourceTree = "<group>"; };
+		5F50268520548D1D00DF3BAF /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		5F84BF792055AF5300FB5481 /* CalendarTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarTableViewCell.swift; sourceTree = "<group>"; };
+		5FA8575C2051AF1B00AEC4E7 /* MainCurrentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCurrentView.swift; sourceTree = "<group>"; };
+		5FA8575E2051DEBB00AEC4E7 /* MainWeekView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWeekView.swift; sourceTree = "<group>"; };
+		5FA857602051EB3300AEC4E7 /* MainLocationsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainLocationsTableViewCell.swift; sourceTree = "<group>"; };
 		5FABE7EF20476929009B36C7 /* WeatherToday.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherToday.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FABE7F220476929009B36C7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5FABE7F42047692A009B36C7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5FABE7F42047692A009B36C7 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		5FABE7F72047692A009B36C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5FABE7F92047692A009B36C7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5FABE7FC2047692A009B36C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -63,15 +65,16 @@
 			isa = PBXGroup;
 			children = (
 				5FABE7F220476929009B36C7 /* AppDelegate.swift */,
-				5FABE7F42047692A009B36C7 /* ViewController.swift */,
+				5FABE7F42047692A009B36C7 /* MainViewController.swift */,
+				5FA8575C2051AF1B00AEC4E7 /* MainCurrentView.swift */,
+				5FA8575E2051DEBB00AEC4E7 /* MainWeekView.swift */,
+				5FA857602051EB3300AEC4E7 /* MainLocationsTableViewCell.swift */,
+				5F50268520548D1D00DF3BAF /* CalendarView.swift */,
+				5F84BF792055AF5300FB5481 /* CalendarTableViewCell.swift */,
 				5FABE7F62047692A009B36C7 /* Main.storyboard */,
-				5F50268520548D1D00DF3BAF /* LocalWeatherCalendarView.swift */,
 				5FABE7F92047692A009B36C7 /* Assets.xcassets */,
 				5FABE7FB2047692A009B36C7 /* LaunchScreen.storyboard */,
 				5FABE7FE2047692A009B36C7 /* Info.plist */,
-				5FA8575C2051AF1B00AEC4E7 /* CurrentWeatherView.swift */,
-				5FA8575E2051DEBB00AEC4E7 /* WeekWeatherForecastView.swift */,
-				5FA857602051EB3300AEC4E7 /* LocationsTableViewCell.swift */,
 			);
 			path = WeatherToday;
 			sourceTree = "<group>";
@@ -148,12 +151,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5FA8575D2051AF1B00AEC4E7 /* CurrentWeatherView.swift in Sources */,
-				5FA857612051EB3300AEC4E7 /* LocationsTableViewCell.swift in Sources */,
-				5F50268620548D1D00DF3BAF /* LocalWeatherCalendarView.swift in Sources */,
-				5FABE7F52047692A009B36C7 /* ViewController.swift in Sources */,
+				5FA8575D2051AF1B00AEC4E7 /* MainCurrentView.swift in Sources */,
+				5FA857612051EB3300AEC4E7 /* MainLocationsTableViewCell.swift in Sources */,
+				5F50268620548D1D00DF3BAF /* CalendarView.swift in Sources */,
+				5FABE7F52047692A009B36C7 /* MainViewController.swift in Sources */,
+				5F84BF7A2055AF5300FB5481 /* CalendarTableViewCell.swift in Sources */,
 				5FABE7F320476929009B36C7 /* AppDelegate.swift in Sources */,
-				5FA8575F2051DEBB00AEC4E7 /* WeekWeatherForecastView.swift in Sources */,
+				5FA8575F2051DEBB00AEC4E7 /* MainWeekView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

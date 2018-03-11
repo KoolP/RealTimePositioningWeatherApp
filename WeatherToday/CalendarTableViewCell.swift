@@ -8,8 +8,17 @@
 
 import UIKit
 
-class ForecastTableViewCell: UITableViewCell {
+class CalendarTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var dayAndDate: UILabel!
+    @IBOutlet weak var temp: UILabel!
+    @IBOutlet weak var weatherIcon: UIImageView!
+    
+    
+    
+    
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

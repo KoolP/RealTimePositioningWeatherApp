@@ -1,5 +1,5 @@
 //
-//  CurrentWeatherView.swift
+//  WeekWeatherForecast.swift
 //  WeatherToday
 //
 //  Created by Patrik Rikama Hinnenberg on 2018-03-08.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CurrentWeatherView: UIView {
+class MainWeekView: UIView {
 
     /*
     // Only override draw() if you perform custom drawing.
