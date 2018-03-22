@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5F3BCB1F206466F7004EB4C6 /* MainCurrentData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F3BCB1E206466F7004EB4C6 /* MainCurrentData.swift */; };
+		5F3BCB2120646B2B004EB4C6 /* MainDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F3BCB2020646B2B004EB4C6 /* MainDataManager.swift */; };
 		5F50268620548D1D00DF3BAF /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F50268520548D1D00DF3BAF /* CalendarView.swift */; };
 		5F84BF7A2055AF5300FB5481 /* CalendarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F84BF792055AF5300FB5481 /* CalendarTableViewCell.swift */; };
 		5FA8575D2051AF1B00AEC4E7 /* MainCurrentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA8575C2051AF1B00AEC4E7 /* MainCurrentView.swift */; };
@@ -20,6 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5F3BCB1E206466F7004EB4C6 /* MainCurrentData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCurrentData.swift; sourceTree = "<group>"; };
+		5F3BCB2020646B2B004EB4C6 /* MainDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainDataManager.swift; sourceTree = "<group>"; };
 		5F50268520548D1D00DF3BAF /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		5F84BF792055AF5300FB5481 /* CalendarTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarTableViewCell.swift; sourceTree = "<group>"; };
 		5FA8575C2051AF1B00AEC4E7 /* MainCurrentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCurrentView.swift; sourceTree = "<group>"; };
@@ -45,6 +49,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5F3BCB1D2064664F004EB4C6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5F3BCB1E206466F7004EB4C6 /* MainCurrentData.swift */,
+				5F3BCB2020646B2B004EB4C6 /* MainDataManager.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		5FABE7E620476929009B36C7 = {
 			isa = PBXGroup;
 			children = (
@@ -64,6 +77,7 @@
 		5FABE7F120476929009B36C7 /* WeatherToday */ = {
 			isa = PBXGroup;
 			children = (
+				5F3BCB1D2064664F004EB4C6 /* Models */,
 				5FABE7F220476929009B36C7 /* AppDelegate.swift */,
 				5FABE7F42047692A009B36C7 /* MainViewController.swift */,
 				5FA8575C2051AF1B00AEC4E7 /* MainCurrentView.swift */,
@@ -153,9 +167,11 @@
 			files = (
 				5FA8575D2051AF1B00AEC4E7 /* MainCurrentView.swift in Sources */,
 				5FA857612051EB3300AEC4E7 /* MainLocationsTableViewCell.swift in Sources */,
+				5F3BCB1F206466F7004EB4C6 /* MainCurrentData.swift in Sources */,
 				5F50268620548D1D00DF3BAF /* CalendarView.swift in Sources */,
 				5FABE7F52047692A009B36C7 /* MainViewController.swift in Sources */,
 				5F84BF7A2055AF5300FB5481 /* CalendarTableViewCell.swift in Sources */,
+				5F3BCB2120646B2B004EB4C6 /* MainDataManager.swift in Sources */,
 				5FABE7F320476929009B36C7 /* AppDelegate.swift in Sources */,
 				5FA8575F2051DEBB00AEC4E7 /* MainWeekView.swift in Sources */,
 			);
