@@ -12,8 +12,7 @@ class MainLocationsTableViewCell: UITableViewCell {
 
     @IBOutlet weak var cityName: UILabel!
     @IBOutlet weak var cityTemp: UILabel!
-    
-    
+    @IBOutlet weak var cityWeatherIcon: UIImageView!
     
     
     override func awakeFromNib() {

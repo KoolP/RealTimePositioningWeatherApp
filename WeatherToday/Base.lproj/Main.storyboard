@@ -179,9 +179,9 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sKz-hc-NzX">
-                                                    <rect key="frame" x="15" y="5.5" width="224" height="43"/>
+                                                    <rect key="frame" x="15" y="5.5" width="180" height="43"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="224" id="hqv-5h-opf"/>
+                                                        <constraint firstAttribute="width" constant="180" id="0p3-gv-YeU"/>
                                                         <constraint firstAttribute="height" constant="43" id="wPl-Ie-Lnu"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
@@ -198,17 +198,27 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Z8n-Np-6tJ">
+                                                    <rect key="frame" x="205" y="1" width="50" height="50"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="50" id="d8h-on-41T"/>
+                                                        <constraint firstAttribute="height" constant="50" id="oz7-Rf-7oO"/>
+                                                    </constraints>
+                                                </imageView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="Ut3-7T-qnv" secondAttribute="trailing" constant="15" id="KVt-uJ-mTg"/>
                                                 <constraint firstItem="sKz-hc-NzX" firstAttribute="centerY" secondItem="o6C-ia-3Yu" secondAttribute="centerY" id="Kcc-Vp-gGP"/>
                                                 <constraint firstItem="Ut3-7T-qnv" firstAttribute="centerY" secondItem="o6C-ia-3Yu" secondAttribute="centerY" id="bJx-ZZ-E5F"/>
+                                                <constraint firstItem="Z8n-Np-6tJ" firstAttribute="centerY" secondItem="o6C-ia-3Yu" secondAttribute="centerY" id="dT7-uh-07w"/>
+                                                <constraint firstItem="Z8n-Np-6tJ" firstAttribute="leading" secondItem="sKz-hc-NzX" secondAttribute="trailing" constant="10" id="llf-HV-mpr"/>
                                                 <constraint firstItem="sKz-hc-NzX" firstAttribute="leading" secondItem="o6C-ia-3Yu" secondAttribute="leading" constant="15" id="wTO-oG-Vzw"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="cityName" destination="sKz-hc-NzX" id="n2c-al-74C"/>
                                             <outlet property="cityTemp" destination="Ut3-7T-qnv" id="QoM-0S-MVz"/>
+                                            <outlet property="cityWeatherIcon" destination="Z8n-Np-6tJ" id="X2Q-Cb-mIg"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

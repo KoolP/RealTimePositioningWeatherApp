@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		5F3BCB1F206466F7004EB4C6 /* MainCurrentData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F3BCB1E206466F7004EB4C6 /* MainCurrentData.swift */; };
 		5F3BCB2120646B2B004EB4C6 /* MainDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F3BCB2020646B2B004EB4C6 /* MainDataManager.swift */; };
+		5F3BCB232065196E004EB4C6 /* MainData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5F3BCB222065196E004EB4C6 /* MainData.plist */; };
 		5F50268620548D1D00DF3BAF /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F50268520548D1D00DF3BAF /* CalendarView.swift */; };
 		5F84BF7A2055AF5300FB5481 /* CalendarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F84BF792055AF5300FB5481 /* CalendarTableViewCell.swift */; };
 		5FA8575D2051AF1B00AEC4E7 /* MainCurrentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA8575C2051AF1B00AEC4E7 /* MainCurrentView.swift */; };
@@ -24,6 +25,7 @@
 /* Begin PBXFileReference section */
 		5F3BCB1E206466F7004EB4C6 /* MainCurrentData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCurrentData.swift; sourceTree = "<group>"; };
 		5F3BCB2020646B2B004EB4C6 /* MainDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainDataManager.swift; sourceTree = "<group>"; };
+		5F3BCB222065196E004EB4C6 /* MainData.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = MainData.plist; sourceTree = "<group>"; };
 		5F50268520548D1D00DF3BAF /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		5F84BF792055AF5300FB5481 /* CalendarTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarTableViewCell.swift; sourceTree = "<group>"; };
 		5FA8575C2051AF1B00AEC4E7 /* MainCurrentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCurrentView.swift; sourceTree = "<group>"; };
@@ -54,6 +56,7 @@
 			children = (
 				5F3BCB1E206466F7004EB4C6 /* MainCurrentData.swift */,
 				5F3BCB2020646B2B004EB4C6 /* MainDataManager.swift */,
+				5F3BCB222065196E004EB4C6 /* MainData.plist */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -155,6 +158,7 @@
 				5FABE7FD2047692A009B36C7 /* LaunchScreen.storyboard in Resources */,
 				5FABE7FA2047692A009B36C7 /* Assets.xcassets in Resources */,
 				5FABE7F82047692A009B36C7 /* Main.storyboard in Resources */,
+				5F3BCB232065196E004EB4C6 /* MainData.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

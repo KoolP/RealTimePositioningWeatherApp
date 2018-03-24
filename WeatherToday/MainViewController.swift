@@ -12,6 +12,9 @@ class MainViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+//        let manager = MainDataManager()
+//        manager.fetch()
         // Do any additional setup after loading the view, typically from a nib.
     }
 

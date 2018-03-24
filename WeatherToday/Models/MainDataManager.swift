@@ -10,12 +10,36 @@
 import Foundation
 
 class MainDataManager {
-//    //takes data from a immaginary local xml .plist
-//    - fileprivate func loadData() [[String: AnyObject]] {
-//    guard let path = Bundle.main.path(forResource: "MainCurrentData", ofType: "plist"),
-//    let items = NSArray(contentsOfFile: path) else {
-//    return [[:]]
-//    }
-//    }
+    
+    fileprivate var items:[MainCurrentData] = []
+    //takes data from a MainData.plist(test) local xml .plist
+    func fetch() {
+        for data in loadData() {
+            print(data)
+            items.append(MainCurrentData(dict: data))
+        }
+    }
+    
+    func numberOfItems() -> Int {
+        return items.count
+    }
+    
+    func explore(at index:IndexPath) -> MainCurrentData {
+        return items[index.item]
+    }
+    
+    fileprivate func loadData() -> [[String: AnyObject]] {
+        guard let path = Bundle.main.path(forResource: "MainData", ofType: "plist"),
+            let items = NSArray(contentsOfFile: path) else {
+                //or else if any condition is false return array with empty dictonary
+                return [[:]]
+        }
+        //gives back array of dictonary items
+        return items as! [[String : AnyObject]]
+    }
     
 }
+
+
+
+

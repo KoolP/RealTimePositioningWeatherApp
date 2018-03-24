@@ -11,16 +11,16 @@ import Foundation
 
 //struct makes init by default. Cant make them inital we make them optional
 struct MainCurrentData {
-    var city:String?
-    var temp:String?
+    var name:String?
+    var image:String?
     //var weatherIcon:String?
 }
 
-
+//custom initialiser for dictonary data, takes dictonary object as parameter
 extension MainCurrentData {
     init(dict:[String:AnyObject]) {
-        self.city  = dict["city"] as? String
-        self.temp = dict["temp"] as? String
+        self.name = dict["name"] as? String
+        self.image = dict["image"] as? String
     }
 }
 
