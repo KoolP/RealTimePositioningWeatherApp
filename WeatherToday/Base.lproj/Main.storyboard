@@ -38,9 +38,9 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Euy-f1-rpP">
-                                <rect key="frame" x="312" y="306" width="43" height="43"/>
+                                <rect key="frame" x="312" y="306" width="40" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="search"/>
+                                <state key="normal" title="Button" image="search2"/>
                                 <connections>
                                     <segue destination="Tup-1j-zQX" kind="show" id="ola-Y7-tcT"/>
                                 </connections>
@@ -422,6 +422,6 @@
         <image name="cloud2" width="225" height="136"/>
         <image name="logov2px180" width="180" height="180"/>
         <image name="sateliteSmall" width="84" height="108"/>
-        <image name="search" width="45" height="45"/>
+        <image name="search2" width="45" height="45"/>
     </resources>
 </document>
