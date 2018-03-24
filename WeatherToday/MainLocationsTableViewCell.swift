@@ -1,8 +1,8 @@
 //
-//  LocationsTableViewCell.swift
+//  MainLocationsTableViewCell.swift
 //  WeatherToday
 //
-//  Created by Patrik Rikama Hinnenberg on 2018-03-08.
+//  Created by Patrik Rikama Hinnenberg on 2018-03-24.
 //  Copyright © 2018 Patrik Rikama Hinnenberg. All rights reserved.
 //
 
@@ -10,9 +10,9 @@ import UIKit
 
 class MainLocationsTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var cityName: UILabel!
-    @IBOutlet weak var cityTemp: UILabel!
-    @IBOutlet weak var cityWeatherIcon: UIImageView!
+    @IBOutlet weak var locationCityName: UILabel!
+    @IBOutlet weak var locationWeatherIcon: UIImageView!
+    @IBOutlet weak var locationTemp: UILabel!
     
     
     override func awakeFromNib() {
