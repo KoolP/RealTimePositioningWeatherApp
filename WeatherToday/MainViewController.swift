@@ -10,6 +10,8 @@ import UIKit
 
 class MainViewController: UIViewController {
 
+    @IBOutlet weak var dateTime: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -18,6 +20,17 @@ class MainViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
 
+    @IBAction func satelite(_ sender: Any) {
+        let datum = Date()
+        let dateformatter = DateFormatter()
+        dateformatter.dateStyle = .medium
+        dateformatter.timeStyle = .short
+        dateformatter.locale = Locale(identifier: "sv_SE")
+        let stringDate: String = dateformatter.string(from: datum)
+        self.dateTime.text = stringDate
+    }
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
