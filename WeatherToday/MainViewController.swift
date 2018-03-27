@@ -15,19 +15,26 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        dateTime.isHidden = true;
+        
 //        let manager = MainDataManager()
 //        manager.fetch()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
     @IBAction func satelite(_ sender: Any) {
-        let datum = Date()
-        let dateformatter = DateFormatter()
-        dateformatter.dateStyle = .medium
-        dateformatter.timeStyle = .short
-        dateformatter.locale = Locale(identifier: "sv_SE")
-        let stringDate: String = dateformatter.string(from: datum)
-        self.dateTime.text = stringDate
+        if dateTime.isHidden == true {
+            dateTime.isHidden = false
+            let datum = Date()
+            let dateformatter = DateFormatter()
+            dateformatter.dateStyle = .medium
+            dateformatter.timeStyle = .short
+            dateformatter.locale = Locale(identifier: "sv_SE")
+            let stringDate: String = dateformatter.string(from: datum)
+            self.dateTime.text = stringDate
+        }else if dateTime.isHidden == false {
+            dateTime.isHidden = true
+        }
     }
     
     
