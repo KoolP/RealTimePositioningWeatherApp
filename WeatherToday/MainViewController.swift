@@ -25,6 +25,10 @@ class MainViewController: UIViewController {
     @IBAction func satelite(_ sender: Any) {
         if dateTime.isHidden == true {
             dateTime.isHidden = false
+            dateTime.alpha = 0.0
+            UIView.animate(withDuration: 0.8, animations: {
+                self.dateTime.alpha = 1.0
+            })
             let datum = Date()
             let dateformatter = DateFormatter()
             dateformatter.dateStyle = .medium

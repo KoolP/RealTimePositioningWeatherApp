@@ -17,6 +17,8 @@ struct Location {
 class LocationDataModel: NSObject, CLLocationManagerDelegate {
     private let locationManager = CLLocationManager()
     
+    let myDebugString = "LocationDataModel active"
+    
     typealias LocationClosure = (Location) -> Void
     private let onLocationFound: LocationClosure
     
@@ -69,5 +71,6 @@ class LocationDataModel: NSObject, CLLocationManagerDelegate {
             startUpdating()
         }
     }
+    
 
 }
