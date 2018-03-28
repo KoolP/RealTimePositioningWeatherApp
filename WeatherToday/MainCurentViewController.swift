@@ -37,6 +37,7 @@ class MainCurentViewController: UIViewController {
             weatherDatastore.retrieveCurrentWeatherAtLat(lat: location.lat, lon: location.lon) {
                 currentWeatherConditions in
                 
+                
                 //fel, hur söka datan till denna viewcontroller?
 //                self?.renderCurrent(currentWeatherConditions: currentWeatherConditions)
                 return
