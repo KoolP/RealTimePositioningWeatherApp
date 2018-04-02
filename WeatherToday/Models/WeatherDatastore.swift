@@ -14,14 +14,15 @@ import SwiftyJSON
 class WeatherDatastore {
     let APIKey = "a46f63c4899f9a64dc67f7114b104f2b"
     
+    // Alamofire + 5 methods
     //  Sending the request current, parses the JSON response to convert it to struct:
     func retrieveCurrentWeatherAtLat(lat: CLLocationDegrees, lon: CLLocationDegrees,
                                      block: @escaping (_ weatherCondition: WeatherCondition) -> Void) {
-        let url = "http://api.openweathermap.org/data/2.5/weather?APPID=\(APIKey)"
+        let url = "https://api.openweathermap.org/data/2.5/weather?APPID=\(APIKey)"
         let params = ["lat": lat, "lon": lon]
-        
-        Alamofire.request(url, method: .get, parameters: params, encoding: JSONEncoding.default).responseJSON { (response) in
-            
+        print("Sending request... \(url)")
+        let request = Alamofire.request(url, method: .get, parameters: params, encoding: URLEncoding(destination: .queryString)).responseJSON { (response) in
+            print("Got response from server: \(response)")
             switch response.result {
             case .success(let json):
                 let json = JSON(json)
@@ -31,6 +32,7 @@ class WeatherDatastore {
                 print("Error: \(error)")
             }
         }
+        request.resume()
     }
     
     //  Sending the request, returns an array of WeatherCondition:

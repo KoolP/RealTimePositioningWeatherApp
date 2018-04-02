@@ -39,6 +39,7 @@ class MainCurentViewController: UIViewController {
                 
                 
                 //fel, hur söka datan till denna viewcontroller?
+                //weatherdatastore gör en array hur printa den.
 //                self?.renderCurrent(currentWeatherConditions: currentWeatherConditions)
                 return
             }

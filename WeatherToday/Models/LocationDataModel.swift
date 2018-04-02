@@ -30,22 +30,24 @@ class LocationDataModel: NSObject, CLLocationManagerDelegate {
         startUpdating()
     }
     
-    private func startUpdating() {
+    func startUpdating() {
         locationManager.startUpdatingLocation()
     }
     
-    private func stopUpdating() {
+    func stopUpdating() {
         locationManager.stopUpdatingLocation()
     }
     
-    func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
-        locationManager.stopUpdatingLocation()
-        DispatchQueue.main.async {
-            self.onLocationFound(Location(lat: 37.3175, lon: 122.0419))
-        }
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        //locationManager.stopUpdatingLocation()
+        print("Something went wrong with the location manager: \(error)")
+//        DispatchQueue.main.async {
+//            self.onLocationFound(Location(lat: 37.3175, lon: 122.0419))
+//        }
     }
     
-    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+    //Keeps track on if user updates location, uses location array
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let locationArray = locations as NSArray
         let locationObj = locationArray.lastObject as! CLLocation
         let coord = locationObj.coordinate
@@ -54,11 +56,15 @@ class LocationDataModel: NSObject, CLLocationManagerDelegate {
             self.onLocationFound(Location(lat: coord.latitude, lon: coord.longitude))
         }
         
-        stopUpdating()
+        //Print coordinates
+        print("coord = \(coord)")
+        //We can get all kind of info: locationObj.altitude, locationObj.speed
+        print(locationObj.altitude)
+        
+        //stopUpdating()
     }
     
-    func locationManager(manager: CLLocationManager,
-                         didChangeAuthorizationStatus status: CLAuthorizationStatus) {
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         switch status {
         case .restricted:
             NSLog("Denied access: Restricted Access to location")
