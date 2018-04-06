@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MainWeekCollectionViewCell: UICollectionViewCell {
+class MainHourlyViewCell: UICollectionViewCell {
     
     @IBOutlet weak var weekDayLabel: UILabel!
     @IBOutlet weak var tempLabel: UILabel!

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MainLocationsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class MainWeeklyViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     let locations = ["Gothenburg", "Helsinki", "Stockholm", "Miami", "Amsterdam"]
     
@@ -24,7 +24,7 @@ class MainLocationsViewController: UIViewController, UITableViewDelegate, UITabl
     @available(iOS 2.0, *)
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
-        let cell:MainLocationsTableViewCell = tableView.dequeueReusableCell(withIdentifier: "mainLocationsTableViewCell") as! MainLocationsTableViewCell
+        let cell:MainWeeklyTableViewCell = tableView.dequeueReusableCell(withIdentifier: "mainLocationsTableViewCell") as! MainWeeklyTableViewCell
         
             cell.locationCityName?.text = self.locations[indexPath.row]
         

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MainCollectionWeekViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+class MainHourlyViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
     //v2 from plist
     let manager = MainDataManager()
@@ -21,7 +21,7 @@ class MainCollectionWeekViewController: UIViewController, UICollectionViewDelega
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
     {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MainWeekCollectionViewCell", for: indexPath) as! MainWeekCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MainWeekCollectionViewCell", for: indexPath) as! MainHourlyViewCell
 
         //v1 fake array
 //        cell.weatherImage.image = weatherImageArray[indexPath.row]
