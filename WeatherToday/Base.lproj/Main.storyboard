@@ -42,9 +42,6 @@
                                 <rect key="frame" x="312" y="306" width="40" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="search2"/>
-                                <connections>
-                                    <segue destination="Tup-1j-zQX" kind="show" id="ola-Y7-tcT"/>
-                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cloud2" translatesAutoresizingMaskIntoConstraints="NO" id="F0r-by-XAS">
                                 <rect key="frame" x="-74" y="102" width="191" height="115"/>
@@ -294,7 +291,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mon" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="swQ-Ct-RCc">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="hh/min" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="swQ-Ct-RCc">
                                                     <rect key="frame" x="0.0" y="0.0" width="50" height="16"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="16" id="ZDT-0L-2IA"/>

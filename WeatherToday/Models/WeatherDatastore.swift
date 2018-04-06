@@ -14,7 +14,6 @@ import SwiftyJSON
 class WeatherDatastore {
     let APIKey = "a46f63c4899f9a64dc67f7114b104f2b"
     
-    // Alamofire + 5 methods
     //  Sending the request current, parses the JSON response to convert it to struct:
     func retrieveCurrentWeatherAtLat(lat: CLLocationDegrees, lon: CLLocationDegrees,
                                      block: @escaping (_ weatherCondition: WeatherCondition) -> Void) {
@@ -35,13 +34,14 @@ class WeatherDatastore {
         request.resume()
     }
     
-    //  Sending the request, returns an array of WeatherCondition:
+    //  Sending the request, returns an array of hourly WeatherCondition:
     func retrieveHourlyForecastAtLat(lat: CLLocationDegrees,
                                      lon: CLLocationDegrees,
                                      block: @escaping (_ weatherConditions: Array<WeatherCondition>) -> Void) {
-        let url = "http://api.openweathermap.org/data/2.5/forecast?APPID=\(APIKey)"
+        let url = "https://api.openweathermap.org/data/2.5/forecast?APPID=\(APIKey)"
         let params = ["lat":lat, "lon":lon]
-        Alamofire.request(url, method: .get, parameters: params, encoding: JSONEncoding.default).responseJSON { (response) in
+        Alamofire.request(url, method: .get, parameters: params, encoding: URLEncoding(destination: .queryString)).responseJSON { (response) in
+                print("Got 2nd response from server: \(response)")
                 switch response.result {
                 case .success(let json):
                     let json = JSON(json)
@@ -56,34 +56,36 @@ class WeatherDatastore {
                 }
         }
     }
-    
-//  Sending the request, function returns an array for the forecast of the day and upcoming days
-    func retrieveDailyForecastAtLat(lat: Double,
-                                    lon: Double,
-                                    dayCnt: Int,
-                                    block: @escaping (_ weatherConditions: Array<WeatherCondition>) -> Void) {
-        let url = "http://api.openweathermap.org/data/2.5/forecast/daily?APPID=\(APIKey)"
-        let params = ["lat":lat, "lon":lon, "cnt":Double(dayCnt+1)]
-        Alamofire.request(url, method: .get, parameters: params, encoding: JSONEncoding.default).responseJSON { (response) in
-                switch response.result {
-                case .success(let json):
-                    let json = JSON(json)
-                    let list: Array<JSON> = json["list"].arrayValue
-                    let weatherConditions: Array<WeatherCondition> = list.map() {
-                        return self.createDayForecastFronJson(json: $0)
-                    }
-                    let count = weatherConditions.count
-                    let daysWithoutToday = Array(weatherConditions[1..<count])
-                    block(daysWithoutToday)
-                case .failure(let error):
-                    print("Error: \(error)")
-                }
-        }
-    }
+
+    //API Key may be prohibited for daily forecast: Please error status http://openweathermap.org/faq#error401
+    //Sending the request, function returns an array for the forecast of the day and upcoming days
+//    func retrieveDailyForecastAtLat(lat: Double,
+//                                    lon: Double,
+//                                    dayCnt: Int,
+//                                    block: @escaping (_ weatherConditions: Array<WeatherCondition>) -> Void) {
+//        let url = "http://api.openweathermap.org/data/2.5/forecast/daily?APPID=\(APIKey)"
+//        let params = ["lat":lat, "lon":lon, "cnt":Double(dayCnt+1)]
+//        Alamofire.request(url, method: .get, parameters: params, encoding: URLEncoding(destination: .queryString)).responseJSON { (response) in
+//                print("Got 3rd response from server: \(response)")
+//                switch response.result {
+//                case .success(let json):
+//                    let json = JSON(json)
+//                    let list: Array<JSON> = json["list"].arrayValue
+//                    let weatherConditions: Array<WeatherCondition> = list.map() {
+//                        return self.createDayForecastFronJson(json: $0)
+//                    }
+//                    let count = weatherConditions.count
+//                    let daysWithoutToday = Array(weatherConditions[1..<count])
+//                    block(daysWithoutToday)
+//                case .failure(let error):
+//                    print("Error: \(error)")
+//                }
+//        }
+//    }
     
 }
 
-//function is responsible for the conversion:
+//extension that is responsible for the conversion:
 private extension WeatherDatastore {
     func createWeatherConditionFronJson(json: JSON) -> WeatherCondition{
         let name = json["name"].string

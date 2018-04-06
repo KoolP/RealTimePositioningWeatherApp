@@ -10,15 +10,26 @@ import UIKit
 
 class MainCollectionWeekViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
-    var weatherImageArray = [UIImage(named: "01d"), UIImage(named: "02d"), UIImage(named: "03d"), UIImage(named: "04d"), UIImage(named: "01d"), UIImage(named: "01d"), UIImage(named: "01d"), UIImage(named: "01d")]
+    //v2 from plist
+    let manager = MainDataManager()
     
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {return weatherImageArray.count}
+    //v1 fake array
+//    var weatherImageArray = [UIImage(named: "01d"), UIImage(named: "02d"), UIImage(named: "03d"), UIImage(named: "04d"), UIImage(named: "01d"), UIImage(named: "01d"), UIImage(named: "01d"), UIImage(named: "01d")]
+    
+    //v2 data from plist
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {return manager.numberOfItems()}
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
     {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MainWeekCollectionViewCell", for: indexPath) as! MainWeekCollectionViewCell
+
+        //v1 fake array
+//        cell.weatherImage.image = weatherImageArray[indexPath.row]
         
-        cell.weatherImage.image = weatherImageArray[indexPath.row]
+        let item = manager.explore(at: indexPath)
+        if let temp = item.temp { cell.tempLabel.text = temp}
+        if let image = item.image { cell.weatherImage.image = UIImage(named: image)}
+        
         return cell
         
     }
@@ -26,8 +37,8 @@ class MainCollectionWeekViewController: UIViewController, UICollectionViewDelega
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//                let manager = MainDataManager()
-//                manager.fetch()
+        //v2 from plist
+        manager.fetch()
 
         // Do any additional setup after loading the view.
     }

@@ -17,11 +17,10 @@ class MainViewController: UIViewController {
         
         dateTime.isHidden = true;
         
-//        let manager = MainDataManager()
-//        manager.fetch()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
+    //Pushing satelite animates in the date and time
     @IBAction func satelite(_ sender: Any) {
         if dateTime.isHidden == true {
             dateTime.isHidden = false

@@ -43,7 +43,6 @@ class LocationDataModel: NSObject, CLLocationManagerDelegate {
         print("Something went wrong with the location manager: \(error)")
 //        DispatchQueue.main.async {
 //            self.onLocationFound(Location(lat: 37.3175, lon: 122.0419))
-//        }
     }
     
     //Keeps track on if user updates location, uses location array

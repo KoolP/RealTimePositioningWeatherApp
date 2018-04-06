@@ -5,7 +5,7 @@
 //  Created by Patrik Rikama Hinnenberg on 2018-03-22.
 //  Copyright © 2018 Patrik Rikama Hinnenberg. All rights reserved.
 //
-//  This file communicates with the service and manipulating the data
+//  This file communicates with the local plist and manipulating the data
 
 import Foundation
 

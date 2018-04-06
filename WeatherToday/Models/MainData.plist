@@ -3,32 +3,32 @@
 <plist version="1.0">
     <array>
         <dict>
-            <key>name</key>
-            <string>Gothenburg</string>
+            <key>temp</key>
+            <string>10</string>
             <key>image</key>
             <string>01d.png</string>
         </dict>
         <dict>
-            <key>name</key>
-            <string>Stockholm</string>
+            <key>temp</key>
+            <string>12</string>
+            <key>image</key>
+            <string>01d.png</string>
+        </dict>
+        <dict>
+            <key>temp</key>
+            <string>14</string>
+            <key>image</key>
+            <string>01d.png</string>
+        </dict>
+        <dict>
+            <key>temp</key>
+            <string>9</string>
             <key>image</key>
             <string>02d.png</string>
         </dict>
         <dict>
-            <key>name</key>
-            <string>Helsinki</string>
-            <key>image</key>
-            <string>01d.png</string>
-        </dict>
-        <dict>
-            <key>name</key>
-            <string>Moscow</string>
-            <key>image</key>
-            <string>03d.png</string>
-        </dict>
-        <dict>
-            <key>name</key>
-            <string>Prague</string>
+            <key>temp</key>
+            <string>4</string>
             <key>image</key>
             <string>10d.png</string>
         </dict>

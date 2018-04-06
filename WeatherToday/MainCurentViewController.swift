@@ -19,7 +19,7 @@ class MainCurentViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
 
@@ -32,54 +32,51 @@ class MainCurentViewController: UIViewController {
         super.viewWillAppear(animated)
         locationDataModel = LocationDataModel() { [weak self] location in
 
-            // calls to get the current weather
+            //Current weather forecasts for current lat lon
             let weatherDatastore = WeatherDatastore()
             weatherDatastore.retrieveCurrentWeatherAtLat(lat: location.lat, lon: location.lon) {
                 currentWeatherConditions in
                 
+//                Can't get the cityName from WeatherCondition
+                var currentWeatherConditions: WeatherCondition?
+                self?.mainCurrentCity.text = currentWeatherConditions?.cityName ?? ""
                 
-                //fel, hur söka datan till denna viewcontroller?
-                //weatherdatastore gör en array hur printa den.
-                //                self?.renderCurrent(currentWeatherConditions: currentWeatherConditions)
-                //                return
+                
             }
+            
+            //This request works but will include in weekly/hourlyColectionViewController
+//            weatherDatastore.retrieveHourlyForecastAtLat(lat: location.lat, lon: location.lon) {
+//                hourlyWeatherConditions in
+//
+//            }
+            
+            //APIKey may be prohibited for daily forecast: Please see error status http://openweathermap.org/faq#error401
+//            weatherDatastore.retrieveDailyForecastAtLat(lat: location.lat, lon: location.lon, dayCnt: 7) {
+//                hourlyWeatherConditions in
+//
+//            }
+        
         }
     }
-    
-    
-    
-    
-//    //den är fel
-//    func renderCurrent(currentWeatherConditions: WeatherCondition){
-//        MainCurentViewController.render(currentWeatherConditions)
-//    }
+
+//    extension MainCurentViewController {
 //
-//    //den är fel
-//    // MARK: - Render
-//    extension CurrentWeatherView{
-//        func render(weatherCondition: WeatherCondition){
-//            self.mainCurrentWeatherIcon.image = iconStringFromIcon(weatherCondition.icon!)
-//            self.mainCurrentTemp.text = weatherCondition.weather
-//
-//            var usesMetric = false
-//            if let localeSystem = NSLocale.currentLocale().objectForKey(NSLocaleUsesMetricSystem) as? Bool {
-//                usesMetric = localeSystem
-//            }
-//
-//            if usesMetric {
-//                self.mainCurrentTemp.text = "\(weatherCondition.tempCelsius.roundToInt())°"
-//            } else {
-//                self.mainCurrentTemp.text = "\(weatherCondition.tempFahrenheit.roundToInt())°"
-//            }
-//
-//            self.mainCurrentCity.text = weatherCondition.cityName ?? ""
-//        }
-//    }
-    
-    
-    
-    
-    
+    func renderData(weathercondition: WeatherCondition) {
+//        mainCurrentWeatherIcon.image = IconType
+
+        var usesMetric = false
+        if let localeSystem = Locale.current.usesMetricSystem as? Bool {
+            usesMetric = localeSystem
+        }
+            if usesMetric {
+                mainCurrentTemp.text = "\(weathercondition.tempCelsius.rounded())°"
+            } else {
+                mainCurrentTemp.text = "\(weathercondition.tempFahrenheit.rounded())°"
+            }
+
+            mainCurrentCity.text = weathercondition.cityName ?? ""
+        }
+
     /*
     // MARK: - Navigation
 

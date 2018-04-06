@@ -5,25 +5,25 @@
 //  Created by Patrik Rikama Hinnenberg on 2018-03-22.
 //  Copyright © 2018 Patrik Rikama Hinnenberg. All rights reserved.
 
-//  This file represents our data with city, temp and weatherIcon
+//  This local test file represents city, temp and weatherIcon
+//  Only for training purposes towards a plistfile at the moment
 
 import Foundation
 
 //struct makes init by default. Cant make them inital we make them optional
 struct MainCurrentData {
-    var name:String?
+    var temp:String?
     var image:String?
     //var weatherIcon:String?
 }
 
-//custom initialiser for dictonary data, takes dictonary object as parameter
+//Creates custom initializer, ability to extend and add more functionalities
 extension MainCurrentData {
     init(dict:[String:AnyObject]) {
-        self.name = dict["name"] as? String
+        self.temp = dict["temp"] as? String
         self.image = dict["image"] as? String
     }
 }
-
 
 
 
