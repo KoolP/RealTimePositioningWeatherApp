@@ -11,7 +11,7 @@ import Foundation
 struct WeatherCondition {
     let cityName: String?
     let weather: String
-    let icon: IconType?
+    let icon: String
     let time: NSDate
     let tempKelvin: Double
     let maxTempKelvin: Double

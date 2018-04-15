@@ -7,26 +7,25 @@
 //
 
 import UIKit
+import Foundation
 
 class MainCurentViewController: UIViewController {
 
     @IBOutlet weak var mainCurrentCity: UILabel!
     @IBOutlet weak var mainCurrentTemp: UILabel!
-    @IBOutlet weak var mainCurrentWeatherIcon: UIImageView!
-    
+    @IBOutlet weak var mainCurrentWeatherIcon: UIImageView!    
     private var locationDataModel: LocationDataModel?
-    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -37,30 +36,33 @@ class MainCurentViewController: UIViewController {
             weatherDatastore.retrieveCurrentWeatherAtLat(lat: location.lat, lon: location.lon) {
                 currentWeatherConditions in
                 
-//                Can't get the cityName from WeatherCondition
-                var currentWeatherConditions: WeatherCondition?
-                self?.mainCurrentCity.text = currentWeatherConditions?.cityName ?? ""
-                
-                
+                DispatchQueue.main.async {
+                        self?.mainCurrentCity.text = currentWeatherConditions.cityName ?? ""
+                        self?.mainCurrentTemp.text = "\(currentWeatherConditions.tempCelsius.roundToInt())°"
+                        self?.mainCurrentWeatherIcon.image = UIImage (named: currentWeatherConditions.icon)
+                    print(currentWeatherConditions.tempCelsius.roundToInt())
+                }
+
             }
             
-            //This request works but will include in weekly/hourlyColectionViewController
+            //This request works but will include in MainHourlyColectionViewController
 //            weatherDatastore.retrieveHourlyForecastAtLat(lat: location.lat, lon: location.lon) {
 //                hourlyWeatherConditions in
 //
 //            }
-            
+            //Request not working
             //APIKey may be prohibited for daily forecast: Please see error status http://openweathermap.org/faq#error401
 //            weatherDatastore.retrieveDailyForecastAtLat(lat: location.lat, lon: location.lon, dayCnt: 7) {
 //                hourlyWeatherConditions in
 //
 //            }
-        
         }
+        
     }
+    
 
-//    extension MainCurentViewController {
-//
+//  extension MainCurentViewController {
+//  This metric function not in use
     func renderData(weathercondition: WeatherCondition) {
 //        mainCurrentWeatherIcon.image = IconType
 
@@ -73,18 +75,14 @@ class MainCurentViewController: UIViewController {
             } else {
                 mainCurrentTemp.text = "\(weathercondition.tempFahrenheit.rounded())°"
             }
-
             mainCurrentCity.text = weathercondition.cityName ?? ""
         }
 
-    /*
-    // MARK: - Navigation
+}
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+//Changing temp: Double to whole number Int and assigning to UILabel
+extension Double {
+    func roundToInt() -> Int{
+        return Int(Darwin.round(self))
     }
-    */
-
 }

@@ -10,42 +10,62 @@ import UIKit
 
 class MainHourlyViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
-    //v2 from plist
+    private var locationDataModel: LocationDataModel?
+    
+    
+    //dummy data from plist
     let manager = MainDataManager()
     
-    //v1 fake array
-//    var weatherImageArray = [UIImage(named: "01d"), UIImage(named: "02d"), UIImage(named: "03d"), UIImage(named: "04d"), UIImage(named: "01d"), UIImage(named: "01d"), UIImage(named: "01d"), UIImage(named: "01d")]
-    
-    //v2 data from plist
+    //dummy data from plist
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {return manager.numberOfItems()}
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
     {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MainWeekCollectionViewCell", for: indexPath) as! MainHourlyViewCell
-
-        //v1 fake array
-//        cell.weatherImage.image = weatherImageArray[indexPath.row]
         
         let item = manager.explore(at: indexPath)
         if let temp = item.temp { cell.tempLabel.text = temp}
         if let image = item.image { cell.weatherImage.image = UIImage(named: image)}
         
         return cell
-        
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //v2 from plist
+        //dummy data from plist
         manager.fetch()
 
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        locationDataModel = LocationDataModel() { [weak self] location in
+            
+            //Current weather forecasts for current lat lon
+            let weatherDatastore = WeatherDatastore()
+            
+            //Fetch hourly weather data
+            weatherDatastore.retrieveHourlyForecastAtLat(lat: location.lat, lon: location.lon) {
+                hourlyWeatherConditions in
+                
+                DispatchQueue.main.async {
+                    
+
+                    
+                    
+                    
+                    //print(currentWeatherConditions.tempCelsius.roundToInt())
+                    
+                }
+            }
+        }
     }
     
     

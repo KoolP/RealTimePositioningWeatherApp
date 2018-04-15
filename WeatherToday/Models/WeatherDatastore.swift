@@ -25,8 +25,8 @@ class WeatherDatastore {
             switch response.result {
             case .success(let json):
                 let json = JSON(json)
-                block(self.createWeatherConditionFronJson(json: json))
-                print("Success: \(json)") //test
+                block(self.createWeatherConditionFronJson(json: json))     ///(weatherCondition :self.WeatherConditionFromJson(json))
+                print("Success Let Json: \(json)") //test
             case .failure(let error):
                 print("Error: \(error)")
             }
@@ -100,7 +100,7 @@ private extension WeatherDatastore {
         return WeatherCondition(
             cityName: name,
             weather: weather,
-            icon: IconType(rawValue: icon),
+            icon: icon,
             time: time,
             tempKelvin: tempKelvin,
             maxTempKelvin: maxTempKelvin,
@@ -121,7 +121,7 @@ private extension WeatherDatastore {
         return WeatherCondition(
             cityName: name,
             weather: weather,
-            icon: IconType(rawValue: icon),
+            icon: icon,
             time: time,
             tempKelvin: tempKelvin,
             maxTempKelvin: maxTempKelvin,
