@@ -3,8 +3,8 @@
 WeatherAPP that gives weather conditions based on users position via GPS
 
 How to use:
-If you are testing the app via Simulator; 
-Please update your phone positions via Debug->Simulate Location,
+If you are testing the app via Simulator, 
+please update your phone positions via Debug->Simulate Location,
 to see the automatic location positionin in action.
 
 Description:
