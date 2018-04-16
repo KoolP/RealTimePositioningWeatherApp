@@ -12,7 +12,7 @@ class MainHourlyViewController: UIViewController, UICollectionViewDelegate, UICo
     
     private var locationDataModel: LocationDataModel?
     
-    
+    //CollectionView
     //dummy data from plist
     let manager = MainDataManager()
     
