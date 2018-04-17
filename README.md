@@ -9,8 +9,8 @@ to see the automatic location positionin in action.
 
 Description:
 Weather app that fetches OpenWeather API and automatically updates current weather conditions and temperature for user,
-based on the latitude and longitude position measurementstthat are fetched when app is launched and if user changes
-her location it will update.
+based on the latitude and longitude position measurements that are fetched when app is launched and if user changes
+her location positioning will update.
 
 Features:
 - Uses GPS, CLONASS, Wifi and other location systems that iOS CorelocationManager provides
