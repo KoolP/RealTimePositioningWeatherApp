@@ -13,5 +13,5 @@ based on the latitude and longitude position measurements that are fetched when 
 her location positioning will update.
 
 Features:
-- Uses GPS, CLONASS, Wifi and other location systems that iOS CorelocationManager provides
+- Uses GPS, CLONASS, Wifi and other location systems that iOS Location services provides
 - API fetches for latitude longitude, temperature, hourly temperature, City etc. data from OpenWeather.com 
