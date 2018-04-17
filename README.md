@@ -1,4 +1,4 @@
-# SatelliteWeatherApp
+# Real-time Posotioning Weather App
 
 WeatherAPP that gives weather conditions based on users position via GPS
 
