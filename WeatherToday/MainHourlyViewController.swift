@@ -13,6 +13,7 @@ class MainHourlyViewController: UIViewController, UICollectionViewDelegate, UICo
     @IBOutlet weak var collectionView: UICollectionView!
     private var locationDataModel: LocationDataModel?
     
+
     override func viewDidLoad() {
         super.viewDidLoad()
         //collectionView.reloadData()
