@@ -16,7 +16,9 @@ class MainHourlyViewController: UIViewController, UICollectionViewDelegate, UICo
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        //Tying to fix te CollectionView update bug
         //collectionView.reloadData()
+        
         //dummy data from plist
         //manager.fetch()
     }
