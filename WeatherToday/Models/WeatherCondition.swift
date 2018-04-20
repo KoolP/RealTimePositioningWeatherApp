@@ -49,5 +49,16 @@ struct WeatherCondition {
             return minTempKelvin - 273.15
         }
     }
+    
+//    init(cityName: String, weather: String, icon: String, time: NSDate, tempKelvin: Double, maxTempKelvin: Double, minTempKelvin: Double) {
+//        self.cityName = cityName
+//        self.weather = weather
+//        self.icon = icon
+//        self.time = time
+//        self.tempKelvin = tempKelvin
+//        self.maxTempKelvin = maxTempKelvin
+//        self.minTempKelvin = minTempKelvin
+//    }
+    
 }
 

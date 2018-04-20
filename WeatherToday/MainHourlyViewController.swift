@@ -4,7 +4,7 @@
 //
 //  Created by Patrik Rikama Hinnenberg on 2018-03-24.
 //  Copyright © 2018 Patrik Rikama Hinnenberg. All rights reserved.
-//
+
 
 import UIKit
 
@@ -13,28 +13,23 @@ class MainHourlyViewController: UIViewController, UICollectionViewDelegate, UICo
     @IBOutlet weak var collectionView: UICollectionView!
     private var locationDataModel: LocationDataModel?
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        //Tying to fix te CollectionView update bug
-        //collectionView.reloadData()
-        
-        //dummy data from plist
+        //self.collectionView.reloadData() //does not fix bug
+        //test, dummy data from plist:
         //manager.fetch()
     }
     
-    //dummy data from plist
-    let manager = MainDataManager()
+    //test, dummy data from plist
+    //let manager = MainDataManager()
     
-    //dummy data from plist
-    //number of rows in section (in tableview)
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 8
+        //test, dummy data from plist:
         //return manager.numberOfItems()
     }
     
     
-    //ConficCell for row at (in tebelview)
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell{
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MainWeekCollectionViewCell", for: indexPath) as! MainHourlyViewCell
         
@@ -54,19 +49,17 @@ class MainHourlyViewController: UIViewController, UICollectionViewDelegate, UICo
                     print(hourlyWeatherConditions[0].tempCelsius)
                     
                     let i = (indexPath.row + 1)
-                    //let iconOnArr = hourlyWeatherConditions[i].icon
                     cell.weatherImage.image = UIImage (named: hourlyWeatherConditions[i].icon)
-                    
                     cell.tempLabel.text = "\(hourlyWeatherConditions[i].tempCelsius.roundToInt())°"
-                    
                     let dateFormatter2 = DateFormatter()
                     dateFormatter2.dateFormat = "HH:mm"
                     cell.hoursMinutes.text = dateFormatter2.string(from: hourlyWeatherConditions[i].time as Date)
-                    //HAr jag en array var e den? vad hetr den?
+                    
+                    //tests, did not help the bug with non populating cells:
+                    //self?.collectionView.reloadData()
+                    
+                    //let iconOnArr = hourlyWeatherConditions[i].icon
                     //examle from working request to label
-                    //cell.tempLabel.text = "\(hourlyWeatherConditions.maxTempCelsius.roundToInt())°"
-                    
-                    
                     //print(currentWeatherConditions.tempCelsius.roundToInt())
                     
                 }
@@ -81,15 +74,16 @@ class MainHourlyViewController: UIViewController, UICollectionViewDelegate, UICo
         // Dispose of any resources that can be recreated.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.collectionView.reloadData() //does not fix bug
+        
+    }
     
     //Changed from viewWill appear
     override func viewDidAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        //Tryin something
-//        DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
-//           self.collectionView.reloadData()
-//        }
+           //self.collectionView.reloadData() //does not fix bug
     }
     
     
