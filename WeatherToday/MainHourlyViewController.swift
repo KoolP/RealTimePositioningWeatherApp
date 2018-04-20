@@ -13,7 +13,7 @@ class MainHourlyViewController: UIViewController, UICollectionViewDelegate, UICo
     @IBOutlet weak var collectionView: UICollectionView!
     private var locationDataModel: LocationDataModel?
     
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         //Tying to fix te CollectionView update bug
@@ -29,7 +29,7 @@ class MainHourlyViewController: UIViewController, UICollectionViewDelegate, UICo
     //dummy data from plist
     //number of rows in section (in tableview)
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 15
+        return 8
         //return manager.numberOfItems()
     }
     
@@ -72,7 +72,6 @@ class MainHourlyViewController: UIViewController, UICollectionViewDelegate, UICo
                 }
             }
         }
-        
         return cell
     }
     
@@ -83,8 +82,14 @@ class MainHourlyViewController: UIViewController, UICollectionViewDelegate, UICo
     }
     
     
-    override func viewWillAppear(_ animated: Bool) {
+    //Changed from viewWill appear
+    override func viewDidAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+        //Tryin something
+//        DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
+//           self.collectionView.reloadData()
+//        }
     }
     
     
