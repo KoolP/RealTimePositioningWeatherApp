@@ -241,11 +241,23 @@
                                 <rect key="frame" x="190" y="90" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qt0-nx-P3f">
+                                <rect key="frame" x="8" y="100" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="NcH-5j-mEh"/>
+                                    <constraint firstAttribute="height" constant="30" id="UhG-5x-amL"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.94509803920000002" green="0.70196078429999997" blue="0.1333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="qt0-nx-P3f" firstAttribute="leading" secondItem="jar-gW-Fuw" secondAttribute="leading" constant="8" id="FUq-OE-JzM"/>
+                            <constraint firstItem="jar-gW-Fuw" firstAttribute="bottom" secondItem="qt0-nx-P3f" secondAttribute="bottom" constant="10" id="NWi-f8-SkV"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="jar-gW-Fuw"/>
                     </view>
                     <connections>
+                        <outlet property="canYouBike" destination="qt0-nx-P3f" id="Bmp-AO-4ub"/>
                         <outlet property="mainCurrentCity" destination="4wC-RG-KA7" id="Eic-FR-sHd"/>
                         <outlet property="mainCurrentTemp" destination="l2C-TL-a8g" id="LKh-Fb-0OT"/>
                         <outlet property="mainCurrentWeatherIcon" destination="Qtj-BJ-bxt" id="YQY-wg-00E"/>
@@ -253,7 +265,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ELk-xt-17E" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="30" y="542"/>
+            <point key="canvasLocation" x="28.800000000000001" y="541.52923538230891"/>
         </scene>
         <!--Main Hourly View Controller-->
         <scene sceneID="paP-oH-52X">

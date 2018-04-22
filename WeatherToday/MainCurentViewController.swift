@@ -14,6 +14,8 @@ class MainCurentViewController: UIViewController {
     @IBOutlet weak var mainCurrentCity: UILabel!
     @IBOutlet weak var mainCurrentTemp: UILabel!
     @IBOutlet weak var mainCurrentWeatherIcon: UIImageView!    
+    @IBOutlet weak var canYouBike: UIImageView!
+    
     private var locationDataModel: LocationDataModel?
 
     
@@ -40,7 +42,16 @@ class MainCurentViewController: UIViewController {
                         self?.mainCurrentCity.text = currentWeatherConditions.cityName ?? ""
                         self?.mainCurrentTemp.text = "\(currentWeatherConditions.tempCelsius.roundToInt())°"
                         self?.mainCurrentWeatherIcon.image = UIImage (named: currentWeatherConditions.icon)
+                    
                     print(currentWeatherConditions.tempCelsius.roundToInt())
+                    //Can you bike to school info sign
+                    var tempYouCanBike = currentWeatherConditions.tempCelsius.roundToInt()
+                    if (Int(tempYouCanBike) > 6) {
+                        self?.canYouBike.image = UIImage (named: "bikeYes")
+                    } else if (Int(tempYouCanBike) < 6) {
+                        self?.canYouBike.image = UIImage (named: "bikeNo")
+                    }
+                    
                 }
 
             }
