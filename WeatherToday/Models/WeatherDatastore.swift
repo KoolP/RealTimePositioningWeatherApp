@@ -34,6 +34,7 @@ class WeatherDatastore {
         request.resume()
     }
     
+    // The url for request: https://api.openweathermap.org/data/2.5/forecast?q=london&units=metric&appid=a46f63c4899f9a64dc67f7114b104f2b
     //  Sending the request, returns an array of hourly WeatherCondition:
     func retrieveHourlyForecastAtLat(lat: CLLocationDegrees,
                                      lon: CLLocationDegrees,

@@ -10,15 +10,25 @@ import UIKit
 
 class MainViewController: UIViewController {
 
+    @IBOutlet weak var sateliteButton: UIButton!
     @IBOutlet weak var dateTime: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         dateTime.isHidden = true;
-        
+        moveSatelite(view: sateliteButton)
         // Do any additional setup after loading the view, typically from a nib.
     }
+    
+    func moveSatelite(view: UIView) {
+        let duration: Double = 4.0
+        UIView.animate(withDuration: duration) {
+            self.sateliteButton.frame.origin.x += 300
+        }
+    }
+    
+    
 
     //Pushing satelite animates in the date and time
     @IBAction func satelite(_ sender: Any) {

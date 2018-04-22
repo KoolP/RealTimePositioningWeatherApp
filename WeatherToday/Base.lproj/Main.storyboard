@@ -1,20 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="Futura.ttc">
-            <string>Futura-CondensedMedium</string>
-            <string>Futura-Medium</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -31,11 +25,6 @@
                                     <constraint firstAttribute="height" constant="121" id="vBl-zy-eSw"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Euy-f1-rpP">
-                                <rect key="frame" x="312" y="306" width="40" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="search2"/>
-                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cloud2" translatesAutoresizingMaskIntoConstraints="NO" id="F0r-by-XAS">
                                 <rect key="frame" x="-74" y="102" width="191" height="115"/>
                                 <constraints>
@@ -79,17 +68,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rYd-bk-1hp">
-                                <rect key="frame" x="305" y="20" width="54" height="43"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="43" id="PvG-9e-nci"/>
-                                    <constraint firstAttribute="width" constant="54" id="zMr-Wx-Jsy"/>
-                                </constraints>
-                                <state key="normal" title="Button" image="sattelite22"/>
-                                <connections>
-                                    <action selector="satelite:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OsX-mX-png"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZTM-U0-Nx0">
                                 <rect key="frame" x="286" y="76" width="73" height="15"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -104,6 +82,17 @@
                                     <constraint firstAttribute="width" constant="65" id="V50-oh-T1j"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rYd-bk-1hp">
+                                <rect key="frame" x="305" y="20" width="54" height="43"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="PvG-9e-nci"/>
+                                    <constraint firstAttribute="width" constant="54" id="zMr-Wx-Jsy"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="sattelite22"/>
+                                <connections>
+                                    <action selector="satelite:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OsX-mX-png"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.97254901960784312" green="0.97254901960784312" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -120,6 +109,7 @@
                     </view>
                     <connections>
                         <outlet property="dateTime" destination="Ipi-7v-xgE" id="IUi-bV-OHL"/>
+                        <outlet property="sateliteButton" destination="rYd-bk-1hp" id="d3z-Pv-aow"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -223,7 +213,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZTQ-Mf-00W" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="919" y="32"/>
+            <point key="canvasLocation" x="1118" y="32"/>
         </scene>
         <!--Main Curent View Controller-->
         <scene sceneID="ndw-rR-eWX">
@@ -233,14 +223,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="240" height="140"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Gothenburg" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4wC-RG-KA7">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Enable location service" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4wC-RG-KA7">
                                 <rect key="frame" x="8" y="11" width="224" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="26°" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l2C-TL-a8g">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l2C-TL-a8g">
                                 <rect key="frame" x="58" y="40" width="152" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="76"/>
@@ -379,19 +369,26 @@
             </objects>
             <point key="canvasLocation" x="29" y="689"/>
         </scene>
-        <!--Main Weekly View Controller-->
+        <!--Main Search Controller-->
         <scene sceneID="5sb-ZZ-6me">
             <objects>
-                <viewController id="fQZ-xl-22v" customClass="MainWeeklyViewController" customModule="WeatherToday" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="fQZ-xl-22v" customClass="MainSearchController" customModule="WeatherToday" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Xl9-eh-llM">
                         <rect key="frame" x="0.0" y="0.0" width="343" height="245"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Search city" translatesAutoresizingMaskIntoConstraints="NO" id="t6R-uE-M6d">
+                                <rect key="frame" x="0.0" y="0.0" width="343" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="fQZ-xl-22v" id="4RS-1L-yyg"/>
+                                </connections>
+                            </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="54" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="45Z-YY-qW6">
-                                <rect key="frame" x="0.0" y="0.0" width="343" height="245"/>
+                                <rect key="frame" x="0.0" y="56" width="343" height="189"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="mainLocationsTableViewCell" id="qb6-Ei-VHT" customClass="MainWeeklyTableViewCell" customModule="WeatherToday" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="mainLocationsTableViewCell" id="qb6-Ei-VHT" customClass="MainSearchControllerCell" customModule="WeatherToday" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="343" height="54"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qb6-Ei-VHT" id="oPi-lO-BsM">
@@ -400,22 +397,22 @@
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LwX-QY-UQx">
                                                     <rect key="frame" x="15" y="0.0" width="180" height="43"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="16" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ACH-md-p0W">
-                                                    <rect key="frame" x="286" y="5" width="43" height="43"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="02d" translatesAutoresizingMaskIntoConstraints="NO" id="xgl-Q9-tJ1">
-                                                    <rect key="frame" x="203" y="1" width="50" height="50"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <rect key="frame" x="215.5" y="1" width="50" height="50"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
                                                 </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="16" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ACH-md-p0W">
+                                                    <rect key="frame" x="284" y="5" width="59" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
@@ -433,13 +430,21 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="t6R-uE-M6d" firstAttribute="trailing" secondItem="Cmh-wS-Ct8" secondAttribute="trailing" id="1Po-e6-Lmt"/>
                             <constraint firstAttribute="bottom" secondItem="45Z-YY-qW6" secondAttribute="bottom" id="5vo-82-fq0"/>
-                            <constraint firstItem="45Z-YY-qW6" firstAttribute="top" secondItem="Xl9-eh-llM" secondAttribute="top" id="CIQ-cg-GIP"/>
+                            <constraint firstItem="45Z-YY-qW6" firstAttribute="top" secondItem="Cmh-wS-Ct8" secondAttribute="top" constant="56" id="7Dc-Vx-luj"/>
+                            <constraint firstItem="t6R-uE-M6d" firstAttribute="top" secondItem="Cmh-wS-Ct8" secondAttribute="top" id="IuE-wk-MxW"/>
+                            <constraint firstItem="t6R-uE-M6d" firstAttribute="leading" secondItem="Cmh-wS-Ct8" secondAttribute="leading" id="PBy-sV-DOg"/>
                             <constraint firstAttribute="trailing" secondItem="45Z-YY-qW6" secondAttribute="trailing" id="TSU-Wx-NbL"/>
+                            <constraint firstItem="t6R-uE-M6d" firstAttribute="top" secondItem="Cmh-wS-Ct8" secondAttribute="top" id="lkq-lG-Fr8"/>
                             <constraint firstItem="45Z-YY-qW6" firstAttribute="leading" secondItem="Xl9-eh-llM" secondAttribute="leading" id="rAQ-zD-UYE"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Cmh-wS-Ct8"/>
                     </view>
+                    <connections>
+                        <outlet property="searchBarMain" destination="t6R-uE-M6d" id="6b9-oE-tTV"/>
+                        <outlet property="searchTableView" destination="45Z-YY-qW6" id="XAO-sJ-CPR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QtC-HV-y4o" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -452,6 +457,5 @@
         <image name="cloud2" width="225" height="136"/>
         <image name="earth" width="157" height="157"/>
         <image name="sattelite22" width="158" height="136"/>
-        <image name="search2" width="45" height="45"/>
     </resources>
 </document>

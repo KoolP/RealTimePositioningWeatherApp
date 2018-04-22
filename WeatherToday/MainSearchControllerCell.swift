@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MainWeeklyTableViewCell: UITableViewCell {
+class MainSearchControllerCell: UITableViewCell {
 
     @IBOutlet weak var locationCityName: UILabel!
     @IBOutlet weak var locationWeatherIcon: UIImageView!
