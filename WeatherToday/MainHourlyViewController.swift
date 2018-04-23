@@ -14,17 +14,22 @@ class MainHourlyViewController: UIViewController, UICollectionViewDelegate, UICo
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //self.collectionView.reloadData() //does not fix bug
-        //test, dummy data from plist:
+
+        //TEST
+        //self.collectionView.reloadData()
+        //dummy data from plist:
         //manager.fetch()
     }
     
-    //test, dummy data from plist
+    //TEST
+    //dummy data from plist:
     //let manager = MainDataManager()
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 8
-        //test, dummy data from plist:
+        
+        //TEST
+        //dummy data from plist:
         //return manager.numberOfItems()
     }
     
@@ -54,11 +59,8 @@ class MainHourlyViewController: UIViewController, UICollectionViewDelegate, UICo
                     dateFormatter2.dateFormat = "HH:mm"
                     cell.hoursMinutes.text = dateFormatter2.string(from: hourlyWeatherConditions[i].time as Date)
                     
-                    //tests, did not help the bug with non populating cells:
+                    //TESTS:
                     //self?.collectionView.reloadData()
-                    
-                    //let iconOnArr = hourlyWeatherConditions[i].icon
-                    //examle from working request to label
                     //print(currentWeatherConditions.tempCelsius.roundToInt())
                 }
             }
@@ -67,20 +69,21 @@ class MainHourlyViewController: UIViewController, UICollectionViewDelegate, UICo
     }
     
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        //self.collectionView.reloadData() //does not fix bug
+        //self.collectionView.reloadData()
     }
     
     //Changed from viewWill appear
     override func viewDidAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        //self.collectionView.reloadData() //does not fix bug
+        //self.collectionView.reloadData()
+    }
+    
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
     
     
@@ -99,7 +102,7 @@ class MainHourlyViewController: UIViewController, UICollectionViewDelegate, UICo
 
 
 
-
+//TESTS
 //v1
 //class MainHourlyViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
 //

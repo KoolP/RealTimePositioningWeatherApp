@@ -15,7 +15,7 @@ class MainSearchController: UIViewController, UITableViewDelegate, UITableViewDa
     @IBOutlet weak var searchTableView: UITableView!
     var locationCity: [[String: String]] = []
     
-    //API search from searchbar
+    //API search from searchbarView
     func searchBarSearchButtonClicked(_ searchBarMain: UISearchBar) {
         print("Search button/enter pressed")
         
@@ -33,6 +33,7 @@ class MainSearchController: UIViewController, UITableViewDelegate, UITableViewDa
                         let decoder = JSONDecoder()
                         do {
                             let locationResponse = try decoder.decode(WeatherCondition2.self, from: actualData)
+                            //TEST:
                             //print(locationResponse)
                             print("Now WeatherCondition2")
                             //print(locationResponse.main) gives temp
@@ -43,9 +44,6 @@ class MainSearchController: UIViewController, UITableViewDelegate, UITableViewDa
                             print(self.locationCity)
                             
                             DispatchQueue.main.async {
-                                //self.temp.text = String(format:"%.0f", (locationResponse.main.temp)!) + " °C"
-                                //self.city.text = locationResponse.name
-                                //self.latitude.text = String(format:"%.2f", (locationResponse.coord.lon)!)
                                 self.searchTableView.reloadData()
                             }
             
@@ -70,10 +68,9 @@ class MainSearchController: UIViewController, UITableViewDelegate, UITableViewDa
     @available(iOS 2.0, *)
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        
-        
         return locationCity.count
-        //DummyData
+        
+        //TEST, dummyData
         //return(locations.count)
     }
     
@@ -84,9 +81,9 @@ class MainSearchController: UIViewController, UITableViewDelegate, UITableViewDa
         
             cell.locationCityName?.text = self.locationCity[indexPath.row]["city"]
             cell.locationTemp.text = self.locationCity[indexPath.row]["temp"]
-        cell.locationWeatherIcon.image = UIImage (named: locationCity[indexPath.row]["icon"]!)
-            //cell.locationWeatherIcon.image = self.locationCity[indexPath.row]["city"]
-            //Dummy data
+            cell.locationWeatherIcon.image = UIImage (named: locationCity[indexPath.row]["icon"]!)
+        
+            //TEST dummy data
             //cell.locationCityName?.text = self.locations[indexPath.row]
             //cell.locationWeatherIcon.image = weatherImageArray[indexPath.row]
             //self.temp.text = String(format:"%.0f", (locationResponse.main.temp)!) + " °C"
@@ -127,7 +124,7 @@ class MainSearchController: UIViewController, UITableViewDelegate, UITableViewDa
 
 
 
-
+//TEST
 ////TESTCLASS WITH DUMMYDATA FROM plist
 //class MainWeeklyViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 //    

@@ -6,6 +6,8 @@
 //  Copyright © 2018 Patrik Rikama Hinnenberg. All rights reserved.
 //
 
+//TEST this controller not in use
+
 import UIKit
 
 class CalendarTableViewCell: UITableViewCell {
@@ -13,10 +15,6 @@ class CalendarTableViewCell: UITableViewCell {
     @IBOutlet weak var dayAndDate: UILabel!
     @IBOutlet weak var temp: UILabel!
     @IBOutlet weak var weatherIcon: UIImageView!
-    
-    
-    
-    
     
     
     override func awakeFromNib() {

@@ -15,10 +15,8 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         dateTime.isHidden = true;
         moveSatelite(view: sateliteButton)
-        // Do any additional setup after loading the view, typically from a nib.
     }
     
     func moveSatelite(view: UIView) {
@@ -28,9 +26,7 @@ class MainViewController: UIViewController {
         }
     }
     
-    
-
-    //Pushing satelite animates in the date and time
+    //Pushing the satelite animates in the date and time
     @IBAction func satelite(_ sender: Any) {
         if dateTime.isHidden == true {
             dateTime.isHidden = false
