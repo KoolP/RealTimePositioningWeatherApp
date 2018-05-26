@@ -91,6 +91,10 @@ class MainSearchController: UIViewController, UITableViewDelegate, UITableViewDa
         return(cell)
     }
     
+//    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        <#code#>
+//    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()

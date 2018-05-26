@@ -27,6 +27,7 @@
 		5FABE7F82047692A009B36C7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FABE7F62047692A009B36C7 /* Main.storyboard */; };
 		5FABE7FA2047692A009B36C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5FABE7F92047692A009B36C7 /* Assets.xcassets */; };
 		5FABE7FD2047692A009B36C7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FABE7FB2047692A009B36C7 /* LaunchScreen.storyboard */; };
+		5FE1BD0720B924A4002360AC /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FE1BD0620B924A4002360AC /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		5FABE7F92047692A009B36C7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5FABE7FC2047692A009B36C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5FABE7FE2047692A009B36C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5FE1BD0620B924A4002360AC /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		6D07EE6AC754B3D0B0780506 /* Pods-WeatherToday.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherToday.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WeatherToday/Pods-WeatherToday.debug.xcconfig"; sourceTree = "<group>"; };
 		D5E24AC545B7DBB9F6FC9D59 /* Pods_WeatherToday.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeatherToday.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -111,6 +113,7 @@
 				5F2078362066D47000BBB1FB /* MainSearchControllerCell.swift */,
 				5F50268520548D1D00DF3BAF /* CalendarView.swift */,
 				5F84BF792055AF5300FB5481 /* CalendarTableViewCell.swift */,
+				5FE1BD0620B924A4002360AC /* DetailViewController.swift */,
 				5FABE7F62047692A009B36C7 /* Main.storyboard */,
 				5FABE7F92047692A009B36C7 /* Assets.xcassets */,
 				5FABE7FB2047692A009B36C7 /* LaunchScreen.storyboard */,
@@ -285,6 +288,7 @@
 				5F3BCB1F206466F7004EB4C6 /* MainCurrentData.swift in Sources */,
 				5F40A078208A071000B6FC3B /* WeatherCondition2.swift in Sources */,
 				5F50268620548D1D00DF3BAF /* CalendarView.swift in Sources */,
+				5FE1BD0720B924A4002360AC /* DetailViewController.swift in Sources */,
 				5FABE7F52047692A009B36C7 /* MainViewController.swift in Sources */,
 				5F2078392067B40500BBB1FB /* LocationDataModel.swift in Sources */,
 				5F2078372066D47000BBB1FB /* MainSearchControllerCell.swift in Sources */,
