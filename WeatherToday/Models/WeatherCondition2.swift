@@ -34,6 +34,7 @@ struct Coord: Codable {
 
 struct Weather: Codable {
     let icon: String
+    let main: String
 }
 
 

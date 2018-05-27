@@ -8,12 +8,13 @@
 
 import UIKit
 
+var locationCity: [[String: String]] = []
+var rowNr: Int = 0
+
 class MainSearchController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
-    
     
     @IBOutlet weak var searchBarMain: UISearchBar!
     @IBOutlet weak var searchTableView: UITableView!
-    var locationCity: [[String: String]] = []
     
     //API search from searchbarView
     func searchBarSearchButtonClicked(_ searchBarMain: UISearchBar) {
@@ -39,9 +40,10 @@ class MainSearchController: UIViewController, UITableViewDelegate, UITableViewDa
                             //print(locationResponse.main) gives temp
                             print(locationResponse)
 
-                            self.locationCity.append(["city": locationResponse.name, "temp": String(format:"%.0f",(locationResponse.main.temp)!) + "°C",
-                                                      "icon": "\(locationResponse.weather[0].icon)"])
-                            print(self.locationCity)
+                            locationCity.append(["city": locationResponse.name, "temp": String(format:"%.0f",(locationResponse.main.temp)!),
+                                                      "icon": "\(locationResponse.weather[0].icon)",
+                                "wind": "\(locationResponse.wind["speed"] ?? 0) m/s",])
+                            print(locationCity)
                             
                             DispatchQueue.main.async {
                                 self.searchTableView.reloadData()
@@ -79,8 +81,8 @@ class MainSearchController: UIViewController, UITableViewDelegate, UITableViewDa
     {
         let cell:MainSearchControllerCell = tableView.dequeueReusableCell(withIdentifier: "mainLocationsTableViewCell") as! MainSearchControllerCell
         
-            cell.locationCityName?.text = self.locationCity[indexPath.row]["city"]
-            cell.locationTemp.text = self.locationCity[indexPath.row]["temp"]
+            cell.locationCityName?.text = locationCity[indexPath.row]["city"]
+            cell.locationTemp.text = locationCity[indexPath.row]["temp"]
             cell.locationWeatherIcon.image = UIImage (named: locationCity[indexPath.row]["icon"]!)
         
             //TEST dummy data
@@ -91,9 +93,10 @@ class MainSearchController: UIViewController, UITableViewDelegate, UITableViewDa
         return(cell)
     }
     
-//    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        <#code#>
-//    }
+    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        rowNr = indexPath.row
+        self.parent?.performSegue(withIdentifier: "detailSegue", sender: self)
+    }
     
     
     override func viewDidLoad() {
@@ -125,10 +128,17 @@ class MainSearchController: UIViewController, UITableViewDelegate, UITableViewDa
 
 
 
+//
+//search of temp double append temp version 1:
+//"temp": String(format:"%.0f",(locationResponse.main.temp)!) + "°C",
+//this gives ex 21 without C string
+//cell.locationTemp.text = locationCity[indexPath.row]["temp"]
 
 
+//locationCity.append(["city": locationResponse.name, "temp": String(format:"%.0f",(locationResponse.main.temp)!),
 
 //TEST
+
 ////TESTCLASS WITH DUMMYDATA FROM plist
 //class MainWeeklyViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 //    
